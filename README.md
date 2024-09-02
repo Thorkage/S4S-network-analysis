@@ -1,1 +1,1 @@
-# S4S-network-analysis
+# Community network analysis of the Science for Sustainability theme of Utrecht University
