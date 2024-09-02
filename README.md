@@ -14,6 +14,7 @@ With all the data in place, we want to find and build connections between resear
 ### (3) 📊 Visualization
 The visualisation happens manually be importing the resulting .gexf file into gephi (https://gephi.org/), applying a force-based layout (forceatlas) and adding colors and sizings to nodes. Then the file is again exported and loaded into retina (https://gitlab.com/ouestware/retina), where some manual adjustments are made. The interactive, explorable network can be found at: https://www.uu.nl/en/research/sustainability/science-for-sustainability/collaboration/exploring-the-s4s-community.
 
+<div>
 <iframe
   width="800"
   height="600"
@@ -22,6 +23,7 @@ The visualisation happens manually be importing the resulting .gexf file into ge
   title="Retina"
   allowFullScreen
 ></iframe>
+</div>
 
 There are many options how a project like this can be used at university/ institute level. A similar, less visualisation-driven approach is currently happening at UU by Rik Jannsen: https://www.ricgraph.eu/. 
 
