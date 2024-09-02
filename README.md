@@ -6,13 +6,15 @@ The workflow generated for this project can be roughly seperated into three step
 
 
 ### (1) 💾 Data collection:
-We start the project with 2 given list of names: the mailinglist of S4S and the list of people who have the S4S tag on the 'UU medewerker' website. We need to merge the lists (*merge_lists_of_people.ipynb*) and see which of those people are reseachers. This is done by performing a check against the PURE database where researchers are noted (*lookup_pure.ipynb*). With the names of researchers we can now go ahead and try to find them on both Scopus (https://www.scopus.com) and OpenAlex (https://openalex.org/) via their API services (*retrieve_ids.ipynb*). Now we finally collect all the publications since 2020, when S4S came to life (*retrieve_authorsAndPaper.ipynb*). 
+We start the project with 2 given list of names: the mailinglist of S4S and the list of people who have the S4S tag on the 'UU medewerker' website. We need to merge the lists (*merge_lists_of_people.ipynb*) and see which of those people are reseachers. This is done by performing a check against the PURE database where researchers are noted (*lookup_pure.ipynb*). With the names of researchers we can now go ahead and try to find them on both Scopus (https://www.scopus.com) and OpenAlex (https://openalex.org/) via their API services (*retrieve_ids.ipynb*). Now, we finally collect all the publications since 2020, when S4S came to life (*retrieve_authorsAndPaper.ipynb*). 
 
 ### (2) 🐍 Data processing:
-With all the data in place, we want to find and build connections between researchers and their topics. For this we use the keywords of the publications and find those that are used by different authors. If that is the case, the keyword will be linked to those authors. We repeat for all authors and keywords that are part of our dataset and construct a network (*build_keywordAuthor_network.ipynb*).
+With all the data in place, we want to find and build connections between researchers and their topics. For this, we use the keywords of the publications and find those that are used by different authors. If that is the case, the keyword will be linked to those authors. We repeat for all authors and keywords that are part of our dataset and construct a network (*build_keywordAuthor_network.ipynb*).
 
 ### (3) 📊 Visualization
-The visualisation can be 
+The visualisation happens manually be importing the resulting .gexf file into gephi (https://gephi.org/), applying a force-based layout (forceatlas) and adding colors and sizings to nodes. Then the file is again exported and loaded into retina (https://gitlab.com/ouestware/retina), where some manual adjustments are made. The interactive, explorable network can be found at: https://www.uu.nl/en/research/sustainability/science-for-sustainability/collaboration/exploring-the-s4s-community.
+
+There are many options how a project like this can be used at university/ institute level. A similar, less visualisation-driven approach has been done by Rik Jannsen at UU: https://www.ricgraph.eu/. 
 
  
 
